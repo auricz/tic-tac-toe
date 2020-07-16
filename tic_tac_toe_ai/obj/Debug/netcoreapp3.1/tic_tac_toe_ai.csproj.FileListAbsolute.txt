@@ -1,0 +1,13 @@
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.exe
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.deps.json
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.runtimeconfig.json
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.runtimeconfig.dev.json
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.dll
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\bin\Debug\netcoreapp3.1\tic_tac_toe_ai.pdb
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.csprojAssemblyReference.cache
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.AssemblyInfoInputs.cache
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.AssemblyInfo.cs
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.csproj.CoreCompileInputs.cache
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.dll
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.pdb
+C:\Users\linke\source\repos\tic_tac_toe_ai_cs\tic_tac_toe_ai\obj\Debug\netcoreapp3.1\tic_tac_toe_ai.genruntimeconfig.cache
