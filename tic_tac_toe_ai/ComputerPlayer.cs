@@ -23,5 +23,27 @@ namespace tic_tac_toe
 
             return chosenAnswer;
         }
+
+        private static bool IsThereTwoSameLetters(string[] threeInRow, string letter)
+        {
+            int count = 0;
+
+            foreach (string letterInSpot in threeInRow)
+            {
+                if (letterInSpot == letter)
+                {
+                    count++;
+                }
+            }
+
+            if (count == 2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }
