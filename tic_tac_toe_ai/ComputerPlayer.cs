@@ -10,19 +10,29 @@ namespace tic_tac_toe
         public static int ChooseSpot(string[] takenAnswers)
         {
             int chosenAnswer = 0;
-            bool validSpot = false;
-            Random rand = new Random();
-
-            while (validSpot == false)
+            
+            if (IsThereAlmostWinner(takenAnswers, "X", out chosenAnswer))       // Finds a spot for computer to win now
             {
-                chosenAnswer = rand.Next(0, 9);
-                if (takenAnswers[chosenAnswer] == " ")
-                {
-                    validSpot = true;
-                }
+                return chosenAnswer;
             }
-
-            return chosenAnswer;
+            else if (IsThereAlmostWinner(takenAnswers, "O", out chosenAnswer))  // Finds a spot to prevent the human from winning
+            {
+                return chosenAnswer;
+            }    
+            else                                                                // Otherwise takes a random spot
+            {
+                bool validSpot = false;
+                Random rand = new Random();
+                while (validSpot == false)
+                {
+                    chosenAnswer = rand.Next(0, 9);
+                    if (takenAnswers[chosenAnswer] == " ")
+                    {
+                        validSpot = true;
+                    }
+                }
+                return chosenAnswer;
+            }
         }
 
         private static bool IsThereAlmostWinner(string[] allSpots, string playerLetter, out int winningSpotIndex)       // True if one spot away from winning, and outs that index
@@ -88,7 +98,6 @@ namespace tic_tac_toe
         {
             int count = 0;
             bool isThereOpenSpace = false;
-
             foreach (string letterInSpot in threeInRow)
             {
                 if (letterInSpot == letter)
@@ -100,7 +109,6 @@ namespace tic_tac_toe
                     isThereOpenSpace = true;
                 }
             }
-
             if (count == 2 && isThereOpenSpace == true)
             {
                 return true;
