@@ -11,7 +11,7 @@ namespace tic_tac_toe
             
             while(validSpot == false)
             {
-                Console.Write("It is your turn. Enter your spot number: ");
+                Console.Write("\nIt is your turn. Enter your spot number: ");
                 
                 try 
                 {
