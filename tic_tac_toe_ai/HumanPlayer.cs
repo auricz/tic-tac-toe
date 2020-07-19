@@ -22,16 +22,16 @@ namespace tic_tac_toe
                     }
                     else
                     {
-                        Console.WriteLine("\nYou must choose a spot not taken yet.\n");
+                        Console.WriteLine("\nYou must choose a spot not taken yet.");
                     }
                 }
                 catch (FormatException)
                 {
-                    Console.WriteLine("\nYou must enter a number without letters or symbols.\n");
+                    Console.WriteLine("\nYou must enter a number without letters or symbols.");
                 }
                 catch (IndexOutOfRangeException)
                 {
-                    Console.WriteLine("\nYou must enter a number between 1 and 9.\n");
+                    Console.WriteLine("\nYou must enter a number between 1 and 9.");
                 }
                 
             }

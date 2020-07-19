@@ -18,7 +18,6 @@ namespace tic_tac_toe
             Console.WriteLine("           4 | 5 | 6 ");
             Console.WriteLine("          ---|---|---");
             Console.WriteLine("           1 | 2 | 3 ");
-            Console.WriteLine("");
         }
 
         public static void ShowBoard(string[] answers)      // Called after each move to show updated board with X and O
@@ -27,7 +26,7 @@ namespace tic_tac_toe
             Console.WriteLine("          ---|---|---");
             Console.WriteLine($"           {answers[3]} | {answers[4]} | {answers[5]} ");
             Console.WriteLine("          ---|---|---");
-            Console.WriteLine($"           {answers[0]} | {answers[1]} | {answers[2]} \n");
+            Console.WriteLine($"           {answers[0]} | {answers[1]} | {answers[2]} ");
         }
     }
 }
