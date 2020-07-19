@@ -24,9 +24,10 @@ namespace tic_tac_toe
             return chosenAnswer;
         }
 
-        private static bool IsThereTwoSameLetters(string[] threeInRow, string letter)
+        private static bool IsThereTwoSameLettersAndOpenSpace(string[] threeInRow, string letter)
         {
             int count = 0;
+            bool isThereOpenSpace = false;
 
             foreach (string letterInSpot in threeInRow)
             {
@@ -34,9 +35,13 @@ namespace tic_tac_toe
                 {
                     count++;
                 }
+                else if (letterInSpot == " ")
+                {
+                    isThereOpenSpace = true;
+                }
             }
 
-            if (count == 2)
+            if (count == 2 && isThereOpenSpace == true)
             {
                 return true;
             }
