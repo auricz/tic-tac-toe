@@ -7,9 +7,12 @@ namespace tic_tac_toe
         public string[] CurrentAnswers
         { get; private set; }
 
+        public static int _gameCount = 0;
+
         public Game()
         {
             CurrentAnswers = new string[] { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+            _gameCount++;
         }
         
         public void HumanTurn()
