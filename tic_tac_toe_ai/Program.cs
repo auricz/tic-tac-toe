@@ -20,6 +20,8 @@ namespace tic_tac_toe
 
                 Game game = new Game();
 
+                Console.WriteLine($"\nRound {Game._gameCount}");
+                
                 if (Game._gameCount % 2 == 0)       // Lets computer go first after every other game
                 {
                     game.ComputerTurn();
