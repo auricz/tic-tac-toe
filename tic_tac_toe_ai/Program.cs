@@ -5,38 +5,82 @@ namespace tic_tac_toe
     class Program
     {
         static void Main(string[] args)
-        {  
-            ShowInfo.ShowIntro();
-            Game game = new Game();
+        {
+            int humanWins = 0;
+            int computerWins = 0;
+            int ties = 0;
+            bool isGameDone = false;
             
-            while (game.CheckIfFull() == false)
+            ShowInfo.ShowIntro();
+
+            while (isGameDone == false)
             {
-                game.HumanTurn();
-                ShowInfo.ShowBoard(game.CurrentAnswers);
-                if (game.CheckForWinner("O") || game.CheckIfFull())
+                string continueOrNot;
+                bool isValidInput = false;
+
+                Game game = new Game();
+
+                if (Game._gameCount % 2 == 0)       // Lets computer go first after every other game
                 {
-                    break;
+                    game.ComputerTurn();
+                    ShowInfo.ShowBoard(game.CurrentAnswers);
+                }
+                
+                while (game.CheckIfFull() == false)
+                {
+                    game.HumanTurn();
+                    ShowInfo.ShowBoard(game.CurrentAnswers);
+                    if (game.CheckForWinner("O") || game.CheckIfFull())
+                    {
+                        break;
+                    }
+
+                    game.ComputerTurn();
+                    ShowInfo.ShowBoard(game.CurrentAnswers);
+                    if (game.CheckForWinner("X") || game.CheckIfFull())
+                    {
+                        break;
+                    }
                 }
 
-                game.ComputerTurn();
-                ShowInfo.ShowBoard(game.CurrentAnswers);
-                if (game.CheckForWinner("X") || game.CheckIfFull())
+                if (game.CheckForWinner("O"))
                 {
-                    break;
+                    Console.WriteLine("\nYou won.\n");
+                    humanWins++;
                 }
-            }
+                else if (game.CheckForWinner("X"))
+                {
+                    Console.WriteLine("\nYou lost.\n");
+                    computerWins++;
+                }
+                else if (game.CheckIfFull())
+                {
+                    Console.WriteLine("\nIt is a tie.\n");
+                    ties++;
+                }
 
-            if (game.CheckForWinner("O"))
-            {
-                Console.WriteLine("You win.");
-            }
-            else if (game.CheckForWinner("X"))
-            {
-                Console.WriteLine("You lost.");
-            }
-            else if (game.CheckIfFull())
-            {
-                Console.WriteLine("It is a tie.");
+                Console.WriteLine($"Games won: {humanWins}");
+                Console.WriteLine($"Games lost: {computerWins}");
+                Console.WriteLine($"Games tied: {ties}");
+                Console.Write("\nPlay again? y/n: ");
+
+                while (isValidInput == false)
+                {
+                    continueOrNot = Console.ReadLine().ToLower();
+                    if (continueOrNot == "y")
+                    {
+                        isValidInput = true;
+                    }
+                    else if (continueOrNot == "n")
+                    {
+                        isValidInput = true;
+                        isGameDone = true;
+                    }
+                    else
+                    {
+                        Console.Write("\nYou must enter 'y' (yes) or 'n' (no): ");
+                    }
+                }
             }
         }
     }
